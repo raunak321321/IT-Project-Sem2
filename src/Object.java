@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Object {
-    public static void getTitle(){
+    public static void getCategory(){
         String filename1 = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -19,7 +19,7 @@ public class Object {
         }
     }
 
-    public static void getSubTitle(String Category){
+    public static void getSubCategory(String Category){
         String filename1 = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;

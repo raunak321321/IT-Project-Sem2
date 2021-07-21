@@ -1,8 +1,8 @@
 public class user {
     public static void main(String[] args){
         Shopping s = new Shopping("anything",789999);
-        Object.getTitle();
-        Object.getSubTitle("stationary");
+        Object.getCategory();
+        Object.getSubCategory("stationary");
         Object.getProducts("books");
         Product p =new Product(1);
 //        p.getRating();
