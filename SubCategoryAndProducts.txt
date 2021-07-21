@@ -1,0 +1,8 @@
+Dress|Saree-yellow(id=1),pajama(full-size)(id=2),jeans(id=3)
+watch|Apple(id=4),Xiaomi(id=5),AI-Watch(id=6)
+shoes|Reebok(id=7),Nike(id=8),Adidas(id=9),Fila,Bata(id=10),Skechers(full-size)(id=11)
+goggle|Tom-Ford(id=12),Oliver-Peoples(id=13)
+Televisions|Redmi(id=14),Realme(id=15)
+laptops|Asus(id=16),Acer(id=17),Dell(id=18)
+Chef's knife|Knife Sets(id=19), Stainless Steel Knife(id=20), Chopper Knives(id=21)
+books|Thomas(id=22),Advance Engineering(id=23),Eg(id=24)

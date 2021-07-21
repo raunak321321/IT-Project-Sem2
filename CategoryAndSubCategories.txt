@@ -1,0 +1,4 @@
+fashion|Dress, watch, shoes, goggle
+electronics|Televisions, laptops
+kitchen-utensils|Chef's knife
+stationary|books
