@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Object {
-    public static void getCategory(){
+    public static void getCategory() {
         String filename1 = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -14,12 +14,12 @@ public class Object {
                 String[] arrData = data1.split("\\|");
                 System.out.println(arrData[0]);
             }
-        }catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    public static void getSubCategory(String Category){
+    public static void getSubCategory(String Category) {
         String filename1 = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -31,17 +31,17 @@ public class Object {
                 data1 = myReader1.nextLine();
                 arrData = data1.split("\\|");
             }
-            if(arrData[0].equals(Category)){
-                System.out.println(Category+"->"+arrData[1]);
-            }
-            else{
+            if (arrData[0].equals(Category)) {
+                System.out.println(Category + "->" + arrData[1]);
+            } else {
                 System.out.println("Please enter correct Category name.");
             }
-        }catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
-    public static void getProducts(String subCategory){
+
+    public static void getProducts(String subCategory) {
         String filename1 = "D:\\IdeaProjects\\Testing\\SubCategoryAndProducts.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -53,17 +53,17 @@ public class Object {
                 data1 = myReader1.nextLine();
                 arrData = data1.split("\\|");
             }
-            if(arrData[0].equals(subCategory)){
-                System.out.println(subCategory+"->"+arrData[1]);
-            }
-            else{
+            if (arrData[0].equals(subCategory)) {
+                System.out.println(subCategory + "->" + arrData[1]);
+            } else {
                 System.out.println("Please enter correct subCategory name.");
             }
-        }catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
 
     }
 }

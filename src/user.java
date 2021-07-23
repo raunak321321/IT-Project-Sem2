@@ -11,7 +11,7 @@ public class user {
 //        p.getReviews();
 //        float a = p.getRating();
 //        System.out.println(a);
-        Business b = new Business("anything1",78945612);
+        Business b = new Business("anything1", 78945612);
 //        b.setItem("fashion","Bracelet","Beaded King Bracelet","nice item with good reviews","image1.jpg",450,10);
         Product p = new Product(27);
         float a = p.getRating();

@@ -56,7 +56,7 @@ public class Business {
             myReader = new Scanner(myObj1);
             String data;
             boolean match = false;
-            if(myReader.hasNextLine()) {
+            if (myReader.hasNextLine()) {
                 while (myReader.hasNextLine()) {
                     data = myReader.nextLine();
                     String[] arrData = data.split(" ");
@@ -85,22 +85,23 @@ public class Business {
                     this.email = email;
                     String filePath = "D:\\IdeaProjects\\Testing\\retailers.txt";
                     String appendData = this.userName + " " + this.password + " " + this.email;
-                    FileHandling.appendSameLine(filePath, appendData,false);
+                    FileHandling.appendSameLine(filePath, appendData, false);
                 }
-            }else{
+            } else {
                 this.userName = name;
                 this.password = number;
                 this.email = email;
                 String filePath = "D:\\IdeaProjects\\Testing\\retailers.txt";
                 String appendData = this.userName + " " + this.password + " " + this.email;
-                FileHandling.appendSameLine(filePath, appendData,true);
+                FileHandling.appendSameLine(filePath, appendData, true);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
-    public void setItem(String categoryName, String subCategoryName, String productName, String desc, String imageName, int price, int quantity ) throws IOException {
-        int id=0;
+
+    public void setItem(String categoryName, String subCategoryName, String productName, String desc, String imageName, int price, int quantity) throws IOException {
+        int id = 0;
         String path4 = "D:\\IdeaProjects\\Testing\\id.txt";
         File myObj = new File(path4);
         Scanner myReader;
@@ -108,9 +109,9 @@ public class Business {
             myReader = new Scanner(myObj);
             String temp = myReader.nextLine();
             id = Integer.parseInt(temp);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         int newId = id + 1;
         String data = "" + newId;
         FileWriter fw = new FileWriter(path4, false);
@@ -118,18 +119,18 @@ public class Business {
         bw.write(data);
         bw.close();
 
-        String notAppendData = ", " + subCategoryName ;
-        String appendData = categoryName + "|" + subCategoryName ;
+        String notAppendData = ", " + subCategoryName;
+        String appendData = categoryName + "|" + subCategoryName;
         String path = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
-        FileHandling.appendOrWriteChecker(path,categoryName,appendData,notAppendData,subCategoryName);
+        FileHandling.appendOrWriteChecker(path, categoryName, appendData, notAppendData, subCategoryName);
 
-        String notAppendData1 = "," + productName + "(" + id + ")" ;
-        String appendData1 = subCategoryName + "|" + productName + "(" + id + ")" ;
+        String notAppendData1 = "," + productName + "(" + id + ")";
+        String appendData1 = subCategoryName + "|" + productName + "(" + id + ")";
         String path1 = "D:\\IdeaProjects\\Testing\\SubCategoryAndProducts.txt";
-        FileHandling.appendOrWrite(path1,subCategoryName,appendData1,notAppendData1);
+        FileHandling.appendOrWrite(path1, subCategoryName, appendData1, notAppendData1);
 
         String path2 = "D:\\IdeaProjects\\Testing\\products.txt";
         String appendData2 = productName + "|" + id + "|" + imageName + "|" + desc + "|" + price + "|" + quantity;
-        FileHandling.appendSameLine(path2, appendData2,false);
+        FileHandling.appendSameLine(path2, appendData2, false);
     }
 }
