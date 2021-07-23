@@ -34,7 +34,7 @@ public class Shopping {
 
             }
             if (!match) {
-                System.out.println("Please enter correct login details.");
+                System.out.println("There are no user with this login details.");
                 Scanner scanner = new Scanner(System.in);
                 System.out.println("Enter name again and password again");
                 String[] str = scanner.nextLine().split(" ");
@@ -60,6 +60,7 @@ public class Shopping {
             myReader = new Scanner(myObj1);
             String data;
             boolean match = false;
+            if(myReader.hasNextLine()) {
             while (myReader.hasNextLine()) {
                 data = myReader.nextLine();
                 String[] arrData = data.split(" ");
@@ -88,7 +89,15 @@ public class Shopping {
                 this.email = email;
                 String filePath = "D:\\IdeaProjects\\Testing\\buyers.txt";
                 String appendData = this.userName + " " + this.password + " " + this.email;
-                FileHandling.append(filePath,appendData);
+                FileHandling.appendSameLine(filePath,appendData,false);
+            }
+            }else{
+                this.userName = name;
+                this.password = number;
+                this.email = email;
+                String filePath = "D:\\IdeaProjects\\Testing\\buyers.txt";
+                String appendData = this.userName + " " + this.password + " " + this.email;
+                FileHandling.appendSameLine(filePath, appendData,true);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

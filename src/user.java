@@ -1,14 +1,25 @@
+import java.io.IOException;
+
 public class user {
-    public static void main(String[] args){
-        Shopping s = new Shopping("anything",789999);
-        Object.getCategory();
-        Object.getSubCategory("stationary");
-        Object.getProducts("books");
-        Product p =new Product(1);
+    public static void main(String[] args) throws IOException {
+//        Shopping s = new Shopping("anything",789999);
+//        Object.getCategory();
+//        Object.getSubCategory("stationary");
+//        Object.getProducts("books");
+//        Product p =new Product(1);
 //        p.getRating();
-        p.getReviews();
+//        p.getReviews();
+//        float a = p.getRating();
+//        System.out.println(a);
+        Business b = new Business("anything1",78945612);
+//        b.setItem("fashion","Bracelet","Beaded King Bracelet","nice item with good reviews","image1.jpg",450,10);
+        Product p = new Product(27);
         float a = p.getRating();
         System.out.println(a);
+        p.getReviews();
+        p.getName();
+        p.getDesc();
+        p.getImage();
 
 //        Shopping s = new Shopping("Raunak10",12341);
 //        System.out.println(s.getName());

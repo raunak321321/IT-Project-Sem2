@@ -1,4 +1,4 @@
-fashion|Dress, watch, shoes, goggle
+fashion|Dress, watch, shoes, goggle, Bracelet
 electronics|Televisions, laptops
 kitchen-utensils|Chef's knife
 stationary|books

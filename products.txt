@@ -22,3 +22,8 @@ Chopper Knives|21|image1.jpg|bakwashitem|400|100
 Thomas|22|image1.jpg|bakwashitem|400|100
 Advance Engineering|23|image1.jpg|bakwashitem|400|100
 Eg|24|image1.jpg|bakwashitem|400|100
+bata|25|image1.jpg|nice item with good reviews|450|10
+bata|26|image1.jpg|nice item with good reviews|450|10
+Beaded King Bracelet|27|image1.jpg|nice item with good reviews|450|10
+Beaded King Bracelet|28|image1.jpg|nice item with good reviews|450|10
+Beaded King Bracelet|29|image1.jpg|nice item with good reviews|450|10
