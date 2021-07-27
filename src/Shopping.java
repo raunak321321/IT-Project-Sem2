@@ -144,7 +144,7 @@ public class Shopping {
         int left = qty - quantity;
     }
 
-    public void buy(Product p, int quantity) {
+    public void buy(Product p, int quantity) throws IOException {
         int qty = p.getQuantity();
         if (quantity > qty) {
             System.out.println("There is only " + qty + "Quantity of this product.");
@@ -160,6 +160,24 @@ public class Shopping {
         System.out.println("Your ordered is placed");
         int left = qty - quantity;
         p.setQuantity(left);
+
+        double amount = 0;
+        String path5 = "D:\\IdeaProjects\\Testing\\earnTillDate.txt";
+        File myObj1 = new File(path5);
+        Scanner myReader1;
+        try {
+            myReader1 = new Scanner(myObj1);
+            String temp = myReader1.nextLine();
+            amount = Double.parseDouble(temp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        double newAmount = amount + p.getPrice()/100f*quantity;
+        String data1 = "" + newAmount;
+        FileWriter fw1 = new FileWriter(path5, false);
+        BufferedWriter bw1 = new BufferedWriter(fw1);
+        bw1.write(data1);
+        bw1.close();
     }
 
     public void buyCartProd() {

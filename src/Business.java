@@ -130,7 +130,7 @@ public class Business {
         FileHandling.appendOrWrite(path1, subCategoryName, appendData1, notAppendData1);
 
         String path2 = "D:\\IdeaProjects\\Testing\\products.txt";
-        String appendData2 = productName + "|" + id + "|" + imageName + "|" + desc + "|" + price + "|" + quantity;
+        String appendData2 = productName + "|" + id + "|" + imageName + "|" + desc + "|" + price + "|" + quantity+"|"+this.userName;
         FileHandling.appendSameLine(path2, appendData2, false);
     }
 }

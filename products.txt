@@ -1,29 +1,30 @@
-Saree|1|image1.jpg|bakwashitem|400|100
-pajama(full-size)|2|image1.jpg|bakwashitem|400|100
-jeans|3|image1.jpg|bakwashitem|400|100
-Apple|4|image1.jpg|bakwashitem|400|100
-Xiaomi|5|image1.jpg|bakwashitem|400|82
-AI-Watch|6|image1.jpg|bakwashitem|400|100
-Reebok|7|image1.jpg|bakwashitem|400|100
-Nike|8|image1.jpg|bakwashitem|400|100
-Adidas|9|image1.jpg|bakwashitem|400|91
-Fila,Bata|10|image1.jpg|bakwashitem|400|50
-Skechers(full-size)|11|image1.jpg|bakwashitem|400|1
-Tom-Ford|12|image1.jpg|bakwashitem|400|100
-Oliver-Peoples |13|image1.jpg|bakwashitem|400|100
-Redmi|14|image1.jpg|bakwashitem|400|100
-Realme|15|image1.jpg|bakwashitem|400|100
-Asus|16|image1.jpg|bakwashitem|400|100
-Acer|17|image1.jpg|bakwashitem|400|100
-Dell|18|image1.jpg|bakwashitem|400|100
-knife Sets|19|image1.jpg|bakwashitem|400|100
-Stainless Steel Knife|20|image1.jpg|bakwashitem|400|100
-Chopper Knives|21|image1.jpg|bakwashitem|400|100
-Thomas|22|image1.jpg|bakwashitem|400|100
-Advance Engineering|23|image1.jpg|bakwashitem|400|100
-Eg|24|image1.jpg|bakwashitem|400|100
-bata|25|image1.jpg|nice item with good reviews|450|10
-bata|26|image1.jpg|nice item with good reviews|450|10
-Beaded King Bracelet|27|image1.jpg|nice item with good reviews|450|10
-Beaded King Bracelet|28|image1.jpg|nice item with good reviews|450|10
-Beaded King Bracelet|29|image1.jpg|nice item with good reviews|450|10
+Saree|1|image1.jpg|bakwashitem|400|100|anything
+pajama(full-size)|2|image1.jpg|bakwashitem|400|100|anything
+jeans|3|image1.jpg|bakwashitem|400|100|anything
+Apple|4|image1.jpg|bakwashitem|400|99
+Xiaomi|5|image1.jpg|bakwashitem|400|82|anything
+AI-Watch|6|image1.jpg|bakwashitem|400|100|anything
+Reebok|7|image1.jpg|bakwashitem|400|100|anything
+Nike|8|image1.jpg|bakwashitem|400|96
+Adidas|9|image1.jpg|bakwashitem|400|91|anything
+Fila,Bata|10|image1.jpg|bakwashitem|400|50|anything
+Skechers(full-size)|11|image1.jpg|bakwashitem|400|1|anything
+Tom-Ford|12|image1.jpg|bakwashitem|400|100|anything
+Oliver-Peoples |13|image1.jpg|bakwashitem|400|98
+Redmi|14|image1.jpg|bakwashitem|400|96
+Realme|15|image1.jpg|bakwashitem|400|100|anything
+Asus|16|image1.jpg|bakwashitem|400|100|anything
+Acer|17|image1.jpg|bakwashitem|400|100|anything1
+Dell|18|image1.jpg|bakwashitem|400|100|anything1
+knife Sets|19|image1.jpg|bakwashitem|400|100|anything1
+Stainless Steel Knife|20|image1.jpg|bakwashitem|400|100|anything1
+Chopper Knives|21|image1.jpg|bakwashitem|400|100|anything1
+Thomas|22|image1.jpg|bakwashitem|400|100|anything1
+Advance Engineering|23|image1.jpg|bakwashitem|400|100|anything1
+Eg|24|image1.jpg|bakwashitem|400|100|anything1
+bata|25|image1.jpg|nice item with good reviews|450|10|anything1
+bata|26|image1.jpg|nice item with good reviews|450|10|anything1
+Beaded King Bracelet|27|image1.jpg|nice item with good reviews|450|10|anything1
+Beaded King Bracelet|28|image1.jpg|nice item with good reviews|450|10|anything1
+Beaded King Bracelet|29|image1.jpg|nice item with good reviews|450|10|anything1
+AK-47|30|image1.jpg|Take negligible time in between shots|45000|1|dwbdwib122ikb

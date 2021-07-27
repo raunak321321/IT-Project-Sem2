@@ -45,8 +45,8 @@ public class Product {
         System.out.println("Name: " + this.name);
     }
 
-    public void getPrice() {
-        System.out.println("Price: " + this.price);
+    public int getPrice() {
+        return this.price;
     }
 
     public int getId() {

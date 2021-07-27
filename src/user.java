@@ -2,8 +2,17 @@ import java.io.IOException;
 
 public class user {
     public static void main(String[] args) throws IOException {
-//        Shopping s = new Shopping("anything",789999);
+        Shopping s = new Shopping("anything",789999);
 //        Object.getCategory();
+//        Product p = new Product(4);
+//        Product p1 = new Product(14);
+//        Product p2 = new Product(13);
+//        Product p3 = new Product(8);
+//        s.addToCart(p,1;);
+//        s.addToCart(p1,4);
+//        s.addToCart(p2,2);
+//        s.addToCart(p3,4)
+        s.buyCartProd();
 //        Object.getSubCategory("stationary");
 //        Object.getProducts("books");
 //        Product p =new Product(1);
@@ -11,15 +20,15 @@ public class user {
 //        p.getReviews();
 //        float a = p.getRating();
 //        System.out.println(a);
-        Business b = new Business("anything1", 78945612);
-//        b.setItem("fashion","Bracelet","Beaded King Bracelet","nice item with good reviews","image1.jpg",450,10);
-        Product p = new Product(27);
-        float a = p.getRating();
-        System.out.println(a);
-        p.getReviews();
-        p.getName();
-        p.getDesc();
-        p.getImage();
+//        Business b = new Business("dwbdwib122ikb", 789456,"hello@321@gmail.com");
+//        b.setItem("Weapon","Pistol","AK-47","Take negligible time in between shots","image1.jpg",45000,1);
+//        Product p = new Product(27);
+//        float a = p.getRating();
+//        System.out.println(a);
+//        p.getReviews();
+//        p.getName();
+//        p.getDesc();
+//        p.getImage();
 
 //        Shopping s = new Shopping("Raunak10",12341);
 //        System.out.println(s.getName());
