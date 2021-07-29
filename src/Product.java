@@ -127,6 +127,7 @@ public class Product {
                     String[] arrStrData = arrData[i].split("-");
                     System.out.print(arrStrData[0] + "-->[" + arrStrData[1] + "]  ");
                 }
+                System.out.println();
             } else {
                 System.out.println("There are no reviews corresponding to this product id.");
             }
