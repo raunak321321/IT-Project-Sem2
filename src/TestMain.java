@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class testMain {
+public class TestMain {
     public static void buy(Shopping s) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ENTER THE CATEGORY OF YOUR CHOICE IN THE LIST BELOW");
@@ -117,7 +117,7 @@ public class testMain {
                 System.out.println("ENTER  USER-NAME(without space)");
                 String name = scanner.next();
                 System.out.println("ENTER PASSWORD");
-                int password = scanner.nextInt();
+                String password = scanner.next();
                 System.out.println("ENTER EMAIL");
                 String email = scanner.next();
                 s = new Shopping(name, password, email);
@@ -125,7 +125,7 @@ public class testMain {
                 System.out.println("ENTER USER-NAME(without space)");
                 String name = scanner.next();
                 System.out.println("ENTER PASSWORD");
-                int password = scanner.nextInt();
+                String password = scanner.next();
                 s = new Shopping(name, password);
             }
             buy(s);
@@ -137,7 +137,7 @@ public class testMain {
                 System.out.println("ENTER  USER-NAME(without space)");
                 String name = scanner.next();
                 System.out.println("ENTER PASSWORD");
-                int password = scanner.nextInt();
+                String password = scanner.next();
                 System.out.println("ENTER EMAIL");
                 String email = scanner.next();
                 b = new Business(name, password, email);
@@ -145,7 +145,7 @@ public class testMain {
                 System.out.println("ENTER USER-NAME(without space)");
                 String name = scanner.next();
                 System.out.println("ENTER PASSWORD");
-                int password = scanner.nextInt();
+                String password = scanner.next();
                 b = new Business(name, password);
             }
             sell(b);
