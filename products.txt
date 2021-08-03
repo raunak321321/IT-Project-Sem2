@@ -1,17 +1,17 @@
-Saree|1|image1.jpg|bakwashitem|400|100|anything
+Saree|1|image1.jpg|bakwashitem|400|98|anything
 pajama(full-size)|2|image1.jpg|bakwashitem|400|100|anything
 jeans|3|image1.jpg|bakwashitem|400|100|anything
-Apple|4|image1.jpg|bakwashitem|400|99
+Apple|4|image1.jpg|bakwashitem|400|99|anything
 Xiaomi|5|image1.jpg|bakwashitem|400|82|anything
 AI-Watch|6|image1.jpg|bakwashitem|400|100|anything
 Reebok|7|image1.jpg|bakwashitem|400|100|anything
-Nike|8|image1.jpg|bakwashitem|400|96
+Nike|8|image1.jpg|bakwashitem|400|96|anything
 Adidas|9|image1.jpg|bakwashitem|400|91|anything
 Fila,Bata|10|image1.jpg|bakwashitem|400|50|anything
 Skechers(full-size)|11|image1.jpg|bakwashitem|400|1|anything
-Tom-Ford|12|image1.jpg|bakwashitem|400|100|anything
+Tom-Ford|12|image1.jpg|bakwashitem|400|98|anything
 Oliver-Peoples |13|image1.jpg|bakwashitem|400|98
-Redmi|14|image1.jpg|bakwashitem|400|96
+Redmi|14|image1.jpg|bakwashitem|400|96|anything
 Realme|15|image1.jpg|bakwashitem|400|100|anything
 Asus|16|image1.jpg|bakwashitem|400|100|anything
 Acer|17|image1.jpg|bakwashitem|400|100|anything1
@@ -28,3 +28,6 @@ Beaded King Bracelet|27|image1.jpg|nice item with good reviews|450|10|anything1
 Beaded King Bracelet|28|image1.jpg|nice item with good reviews|450|10|anything1
 Beaded King Bracelet|29|image1.jpg|nice item with good reviews|450|10|anything1
 AK-47|30|image1.jpg|Take negligible time in between shots|45000|1|dwbdwib122ikb
+kurta-pajama|31|image1.jpg|having yellow color , fabric as nice as possible|456|23|raunaksomani
+chota-BheemToy|32|image1.jpg|this is a china product and having all its body cover with plastic|46456|0|raunaksomani
+Titan 110|33|image1.jpg|China Made|454|33|raunaksomani

@@ -3,3 +3,4 @@ electronics|Televisions, laptops
 kitchen-utensils|Chef's knife
 stationary|books
 Weapon|Pistol
+Toys|Toy-Plane

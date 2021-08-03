@@ -102,13 +102,14 @@ public class Business {
 
     public void setItem(String categoryName, String subCategoryName, String productName, String desc, String imageName, int price, int quantity) throws IOException {
         int id = 0;
-        String path4 = "D:\\IdeaProjects\\Testing\\id.txt";
+        String path4 = "D:\\IdeaProjects\\Testing\\ids.txt";
         File myObj = new File(path4);
         Scanner myReader;
         try {
             myReader = new Scanner(myObj);
             String temp = myReader.nextLine();
-            id = Integer.parseInt(temp);
+            String[] tempArr = temp.split(" ");
+            id = Integer.parseInt(tempArr[0]);
         } catch (IOException e) {
             e.printStackTrace();
         }

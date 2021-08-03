@@ -10,6 +10,7 @@ public class Product {
     private String desc;
     private String picName;
     private int quantity;
+    private String retailerName;
     private float rating;
 
     public Product(int n) {
@@ -32,6 +33,7 @@ public class Product {
                 this.price = Integer.parseInt(arrData[4]);
                 this.picName = arrData[2];
                 this.quantity = Integer.parseInt(arrData[5]);
+                this.retailerName = arrData[6];
             } else {
                 System.out.println("Please enter product id name.");
             }
@@ -99,7 +101,7 @@ public class Product {
 
     void setQuantity(int qty) {
         int id = this.getId();
-        String str = this.name + "|" + this.id + "|" + this.picName + "|" + this.desc + "|" + this.price + "|" + qty;
+        String str = this.name + "|" + this.id + "|" + this.picName + "|" + this.desc + "|" + this.price + "|" + qty + "|" + this.retailerName;
         this.quantity = qty;
         FileHandling.UpdateProductFileLine(id, str);
     }
