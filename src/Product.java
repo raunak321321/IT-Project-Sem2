@@ -14,7 +14,7 @@ public class Product {
     private float rating;
 
     public Product(int n) {
-        String filename1 = "D:\\IdeaProjects\\Testing\\products.txt";
+        String filename1 = "src//products.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         try {
@@ -43,8 +43,8 @@ public class Product {
 
     }
 
-    public void getName() {
-        System.out.println("Name: " + this.name);
+    public String getName() {
+        return this.name;
     }
 
     public int getPrice() {
@@ -58,7 +58,7 @@ public class Product {
     public float getRating() {
         float rating = 0;
         int n = this.getId();
-        String filename1 = "D:\\IdeaProjects\\Testing\\ratings.txt";
+        String filename1 = "src//ratings.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         try {
@@ -107,7 +107,7 @@ public class Product {
     }
 
     public void getReviews() {
-        String filename1 = "D:\\IdeaProjects\\Testing\\reviews.txt";
+        String filename1 = "src//reviews.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         int n = this.id;

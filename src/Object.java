@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Object {
     public static void getCategory() {
-        String filename1 = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
+        String filename1 = "src//CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         try {
@@ -20,7 +20,7 @@ public class Object {
     }
 
     public static void getSubCategory(String Category) {
-        String filename1 = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
+        String filename1 = "src//CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         try {
@@ -42,7 +42,7 @@ public class Object {
     }
 
     public static void getProducts(String subCategory) {
-        String filename1 = "D:\\IdeaProjects\\Testing\\SubCategoryAndProducts.txt";
+        String filename1 = "src//SubCategoryAndProducts.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         try {

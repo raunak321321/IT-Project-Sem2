@@ -10,7 +10,7 @@ public class Administrator extends User {
 
     public double getProfit() {
         double profit = 0;
-        String path4 = "D:\\IdeaProjects\\Testing\\earnTillDate.txt";
+        String path4 = "src//earnTillDate.txt";
         File myObj = new File(path4);
         Scanner myReader;
         try {

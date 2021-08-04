@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 public class FileHandling {
 
-    public static void appendSameLine(String filePath, String appendData, boolean is) {
+    public static void appendSameLine(String filePath, String appendData, boolean isSameLine) {
         try {
             File f1 = new File(filePath);
             Writer output;
             output = new BufferedWriter(new FileWriter(f1.getName(), true)); // clears file every time
-            if (is) {
+            if (isSameLine) {
                 output.append(appendData);
             } else {
                 output.append("\n" + appendData);
@@ -199,7 +199,7 @@ public class FileHandling {
     }
 
     public static void UpdateProductFileLine(int id, String str) {
-        String path = "D:\\IdeaProjects\\Testing\\products.txt";
+        String path = "src//products.txt";
         File myObj = new File(path);
         Scanner myReader;
         try {

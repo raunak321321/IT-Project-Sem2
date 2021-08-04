@@ -7,7 +7,7 @@ public class TestMain {
         System.out.println("Profit you earn till date is: "+a.getProfit());
     }
 
-    public static void buy(Shopping s) throws IOException {
+    public static void buy(Customer s) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ENTER THE CATEGORY OF YOUR CHOICE IN THE LIST BELOW");
         Object.getCategory();
@@ -82,7 +82,7 @@ public class TestMain {
         }
     }
 
-    public static void sell(Business b) throws IOException {
+    public static void sell(Retailer b) throws IOException {
         Scanner scanner = new Scanner(System.in);
         String category, subcategory, productName, description, image;
         int price, quantity;
@@ -100,7 +100,7 @@ public class TestMain {
         price = scanner.nextInt();
         System.out.println("ENTER THE TOTAL QUANTITY OF PRODUCT");
         quantity = scanner.nextInt();
-        b.setItem(category, subcategory, productName, description, image, price, quantity);
+        b.sellItem(category, subcategory, productName, description, image, price, quantity);
         System.out.println("DO YOU WANT TO SELL MORE PRODUCTS");
         boolean input7 = scanner.nextBoolean();
         if (input7)
@@ -111,7 +111,7 @@ public class TestMain {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         boolean user;
-        Shopping s;
+        Customer s;
         System.out.println("You are admin!(type true if yes and false otherwise)");
         boolean isAdmin = scanner.nextBoolean();
         if(isAdmin){
@@ -136,17 +136,17 @@ public class TestMain {
                 String password = scanner.next();
                 System.out.println("ENTER EMAIL");
                 String email = scanner.next();
-                s = new Shopping(name, password, email);
+                s = new Customer(name, password, email);
             } else {
                 System.out.println("ENTER USER-NAME(without space)");
                 String name = scanner.next();
                 System.out.println("ENTER PASSWORD");
                 String password = scanner.next();
-                s = new Shopping(name, password);
+                s = new Customer(name, password);
             }
             buy(s);
         } else {
-            Business b;
+            Retailer b;
             System.out.println("ARE YOU A NEW USER(type true or false)");
             boolean user1 = scanner.nextBoolean();
             if (user1) {
@@ -156,13 +156,13 @@ public class TestMain {
                 String password = scanner.next();
                 System.out.println("ENTER EMAIL");
                 String email = scanner.next();
-                b = new Business(name, password, email);
+                b = new Retailer(name, password, email);
             } else {
                 System.out.println("ENTER USER-NAME(without space)");
                 String name = scanner.next();
                 System.out.println("ENTER PASSWORD");
                 String password = scanner.next();
-                b = new Business(name, password);
+                b = new Retailer(name, password);
             }
             sell(b);
         }

@@ -1,19 +1,19 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class Business extends User {
+public class Retailer extends User {
 
-    public Business(String userName, String password) {
+    public Retailer(String userName, String password) {
         super(false, userName, password, false);
     }
 
-    public Business(String userName, String password, String email) {
+    public Retailer(String userName, String password, String email) {
         super(false, userName, password, email);
     }
 
-    public void setItem(String categoryName, String subCategoryName, String productName, String desc, String imageName, int price, int quantity) throws IOException {
+    public void sellItem(String categoryName, String subCategoryName, String productName, String desc, String imageName, int price, int quantity) throws IOException {
         int id = 0;
-        String path4 = "D:\\IdeaProjects\\Testing\\ids.txt";
+        String path4 = "src//ids.txt";
         File myObj = new File(path4);
         Scanner myReader;
         try {
@@ -33,15 +33,15 @@ public class Business extends User {
 
         String notAppendData = ", " + subCategoryName;
         String appendData = categoryName + "|" + subCategoryName;
-        String path = "D:\\IdeaProjects\\Testing\\CategoryAndSubCategories.txt";
+        String path = "src//CategoryAndSubCategories.txt";
         FileHandling.appendOrWriteChecker(path, categoryName, appendData, notAppendData, subCategoryName);
 
         String notAppendData1 = "," + productName + "(" + id + ")";
         String appendData1 = subCategoryName + "|" + productName + "(" + id + ")";
-        String path1 = "D:\\IdeaProjects\\Testing\\SubCategoryAndProducts.txt";
+        String path1 = "src//SubCategoryAndProducts.txt";
         FileHandling.appendOrWrite(path1, subCategoryName, appendData1, notAppendData1);
 
-        String path2 = "D:\\IdeaProjects\\Testing\\products.txt";
+        String path2 = "src//products.txt";
         String appendData2 = productName + "|" + id + "|" + imageName + "|" + desc + "|" + price + "|" + quantity + "|" + super.getUserName();
         FileHandling.appendSameLine(path2, appendData2, false);
     }

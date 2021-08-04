@@ -9,19 +9,19 @@ public class User {
 
     public User(boolean isBuyer, String userName, String password, String email) {
         if (isBuyer) {
-            userFileHandling(true, "D:\\IdeaProjects\\Testing\\buyers.txt", true, false, userName, password, email);
+            userFileHandling(true, "src//buyers.txt", true, false, userName, password, email);
         } else {
-            userFileHandling(true, "D:\\IdeaProjects\\Testing\\retailers.txt", false, false, userName, password, email);
+            userFileHandling(true, "src//retailers.txt", false, false, userName, password, email);
         }
     }
 
     public User(boolean isBuyer, String userName, String password, boolean isAdmin) {
         if (isBuyer) {
-            userFileHandling(false, "D:\\IdeaProjects\\Testing\\buyers.txt", true, false, userName, password, "");
+            userFileHandling(false, "src//buyers.txt", true, false, userName, password, "");
         } else if (isAdmin) {
-            userFileHandling(false, "D:\\IdeaProjects\\Testing\\admins.txt", false, true, userName, password, "");
+            userFileHandling(false, "src//admins.txt", false, true, userName, password, "");
         } else {
-            userFileHandling(false, "D:\\IdeaProjects\\Testing\\retailers.txt", false, false, userName, password, "");
+            userFileHandling(false, "src//retailers.txt", false, false, userName, password, "");
         }
     }
 
