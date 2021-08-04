@@ -2,6 +2,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class TestMain {
+
+    public static void admin(Administrator a){
+        System.out.println("Profit you earn till date is: "+a.getProfit());
+    }
+
     public static void buy(Shopping s) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ENTER THE CATEGORY OF YOUR CHOICE IN THE LIST BELOW");
@@ -107,6 +112,17 @@ public class TestMain {
         Scanner scanner = new Scanner(System.in);
         boolean user;
         Shopping s;
+        System.out.println("You are admin!(type true if yes and false otherwise)");
+        boolean isAdmin = scanner.nextBoolean();
+        if(isAdmin){
+            Administrator a;
+            System.out.println("ENTER USER-NAME(without space)");
+            String name = scanner.next();
+            System.out.println("ENTER PASSWORD");
+            String password = scanner.next();
+            a = new Administrator(name, password);
+            admin(a);
+        }
         System.out.println("WELCOME TO OUR E COMMERCE WEBSITE");
         System.out.println("DO YOU WANT TO BUY OR SELL PRODUCTS(type true to buy and false to sell)");
         boolean input = scanner.nextBoolean();

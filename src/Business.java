@@ -1,105 +1,14 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class Business extends User{
-//    private String password;
-//    private String userName;
-//    private String email;
+public class Business extends User {
 
     public Business(String userName, String password) {
-        super(false,userName,password);
-//        String filename = "D:\\IdeaProjects\\Testing\\retailers.txt";
-//        File myObj1 = new File(filename);
-//        Scanner myReader;
-//        try {
-//            myReader = new Scanner(myObj1);
-//            String data;
-//            boolean match = false;
-//            while (myReader.hasNextLine()) {
-//                data = myReader.nextLine();
-//                String[] arrData = data.split(" ");
-//                String userName2 = arrData[0];
-//                String email2 = arrData[2];
-//                String password2 = arrData[1];
-//                if (userName.equals(userName2) && password.equals(password2)) {
-//                    this.userName = userName;
-//                    this.password = password;
-//                    this.email = email2;
-//                    match = true;
-//                    break;
-//                }
-//
-//            }
-//            if (!match) {
-//                System.out.println("There are no user with this login details.");
-//                Scanner scanner = new Scanner(System.in);
-//                System.out.println("Enter name again and password again");
-//                String[] str = scanner.nextLine().split(" ");
-//                String password1 = str[1];
-//                String name1 = str[0];
-//                Business s = new Business(name1, password1);
-//                this.userName = s.userName;
-//                this.password = s.password;
-//                this.email = s.email;
-//            }
-//
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-
+        super(false, userName, password, false);
     }
 
     public Business(String userName, String password, String email) {
-        super(false,userName,password,email);
-//        String filename = "D:\\IdeaProjects\\Testing\\retailers.txt";
-//        File myObj1 = new File(filename);
-//        Scanner myReader;
-//        try {
-//            myReader = new Scanner(myObj1);
-//            String data;
-//            boolean match = false;
-//            if (myReader.hasNextLine()) {
-//                while (myReader.hasNextLine()) {
-//                    data = myReader.nextLine();
-//                    String[] arrData = data.split(" ");
-//                    String userName2 = arrData[0];
-//                    if (userName.equals(userName2)) {
-//                        match = true;
-//                        break;
-//                    }
-//
-//                }
-//                if (match) {
-//                    System.out.println("User already present with same username(<:>).");
-//                    Scanner scanner = new Scanner(System.in);
-//                    System.out.print("Enter details again: ");
-//                    String[] str = scanner.nextLine().split(" ");
-//                    String password1 = str[1];
-//                    String email1 = str[2];
-//                    String name1 = str[0];
-//                    Business s = new Business(name1, password1, email1);
-//                    this.userName = s.userName;
-//                    this.password = s.password;
-//                    this.email = s.email;
-//                } else {
-//                    this.userName = userName;
-//                    this.password = password;
-//                    this.email = email;
-//                    String filePath = "D:\\IdeaProjects\\Testing\\retailers.txt";
-//                    String appendData = this.userName + " " + this.password + " " + this.email;
-//                    FileHandling.appendSameLine(filePath, appendData, false);
-//                }
-//            } else {
-//                this.userName = userName;
-//                this.password = password;
-//                this.email = email;
-//                String filePath = "D:\\IdeaProjects\\Testing\\retailers.txt";
-//                String appendData = this.userName + " " + this.password + " " + this.email;
-//                FileHandling.appendSameLine(filePath, appendData, true);
-//            }
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
+        super(false, userName, password, email);
     }
 
     public void setItem(String categoryName, String subCategoryName, String productName, String desc, String imageName, int price, int quantity) throws IOException {
@@ -133,7 +42,7 @@ public class Business extends User{
         FileHandling.appendOrWrite(path1, subCategoryName, appendData1, notAppendData1);
 
         String path2 = "D:\\IdeaProjects\\Testing\\products.txt";
-        String appendData2 = productName + "|" + id + "|" + imageName + "|" + desc + "|" + price + "|" + quantity+"|"+super.getUserName();
+        String appendData2 = productName + "|" + id + "|" + imageName + "|" + desc + "|" + price + "|" + quantity + "|" + super.getUserName();
         FileHandling.appendSameLine(path2, appendData2, false);
     }
 }
