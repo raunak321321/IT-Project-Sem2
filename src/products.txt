@@ -19,7 +19,7 @@ Dell|18|image1.jpg|bakwashitem|400|100|anything1
 knife Sets|19|image1.jpg|bakwashitem|400|100|anything1
 Stainless Steel Knife|20|image1.jpg|bakwashitem|400|100|anything1
 Chopper Knives|21|image1.jpg|bakwashitem|400|100|anything1
-Thomas|22|image1.jpg|bakwashitem|400|100|anything1
+Thomas|22|image1.jpg|bakwashitem|400|100|null
 Advance Engineering|23|image1.jpg|bakwashitem|400|100|anything1
 Eg|24|image1.jpg|bakwashitem|400|100|anything1
 bata|25|image1.jpg|nice item with good reviews|450|10|anything1
