@@ -356,8 +356,8 @@ public class Admin implements FileHandling{
                 product.setDesc(arrData[3]);
                 product.setPrice(Integer.parseInt(arrData[4]));
                 product.setPicName(arrData[2]);
-                product.setQuantity(Integer.parseInt(arrData[5]));
                 product.setRetailerName(arrData[6]);
+                product.setQuantity(Integer.parseInt(arrData[5]));
             } else {
                 System.out.println("Please enter correct product id name.");
             }
@@ -391,7 +391,7 @@ public class Admin implements FileHandling{
                 return 0.0f;
             }
         } catch (FileNotFoundException e) {
-            System.out.println("hello");
+//            System.out.println("hello");
             e.printStackTrace();
         }
         return rating;

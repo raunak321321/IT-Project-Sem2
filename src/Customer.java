@@ -53,24 +53,28 @@ public class Customer extends User{
         int left = qty - quantity;
     }
 
-    public void buy(Product p, int quantity) throws IOException {
+    public boolean buy(Product p, int quantity) throws IOException {
         int qty = p.getQuantity();
         if (quantity > qty) {
-            System.out.println("There is only " + qty + "Quantity of this product.");
-            return;
+            System.out.println("There is only " + qty + " Quantity of this product.");
+            return false;
         }
-        int id = p.getId();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-        String notAppendData = "|" + "Prod-id-" + id + " qty-" + quantity + " " + dtf.format(now);
-        String appendData = super.getUserName() + "|" + "Prod-id-" + id + " qty-" + quantity + " " + dtf.format(now);
-        String path = "src//buyedProducts.txt";
-        Admin.appendOrWrite(path, super.getUserName(), appendData, notAppendData);
-        System.out.println("Your ordered is placed");
-        int left = qty - quantity;
-        p.setQuantity(left);
+        else{
+            int id = p.getId();
+            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+            LocalDateTime now = LocalDateTime.now();
+            String notAppendData = "|" + "Prod-id-" + id + " qty-" + quantity + " " + dtf.format(now);
+            String appendData = super.getUserName() + "|" + "Prod-id-" + id + " qty-" + quantity + " " + dtf.format(now);
+            String path = "src//buyedProducts.txt";
+            Admin.appendOrWrite(path, super.getUserName(), appendData, notAppendData);
+            System.out.println("Your ordered is placed");
+            int left = qty - quantity;
+            p.setQuantity(left);
 
-        Admin.updateEarnAmount(p.getPrice()/100f*quantity);
+            Admin.updateEarnAmount(p.getPrice()/100f*quantity);
+            return true;
+        }
+
     }
 
     public void buyCartProd() {

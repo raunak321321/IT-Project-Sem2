@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class TestMain {
 
-    public static void admin(Administrator a){
-        System.out.println("Profit you earn till date is: "+a.getProfit());
-    }
+//    public static void admin(Administrator a){
+//        System.out.println("Profit you earn till date is: "+a.getProfit());
+//    }
 
     public static void buy(Customer s) throws IOException {
         Scanner scanner = new Scanner(System.in);
@@ -19,9 +19,9 @@ public class TestMain {
         Object.getProducts(subcategory);
         int num = scanner.nextInt();
         Product p = new Product(num);
-        System.out.println("HERE IS THE IMAGE OF THE PRODUCT YOU HAVE SELECTED");
+        System.out.println("IMAGE WILL BE VISIBLE IN NEW DIALOG BOX");
         p.getImage();
-        System.out.println("DESCRIPTION OF THE PRODUCT:");
+//        System.out.println("DESCRIPTION OF THE PRODUCT:");
         p.getDesc();
         System.out.print("PRICE OF THE PRODUCT:");
         int price = p.getPrice();
@@ -44,7 +44,7 @@ public class TestMain {
                 System.out.println("ENTER THE QUANTITY OF THE PRODUCT YOU WISH TO BUY");
                 int q = scanner.nextInt();
                 s.addToCart(p, q);
-                System.out.println("DO YOU WANT TO SELECT MORE PRODUCTS");
+                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS");
                 boolean input4 = scanner.nextBoolean();
                 if (input4)
                     buy(s);
@@ -52,23 +52,26 @@ public class TestMain {
             case 2 -> {
                 System.out.println("ENTER THE QUANTITY OF THE PRODUCT YOU WISH TO BUY");
                 int q1 = scanner.nextInt();
-                s.buy(p, q1);
-                System.out.println("YOU HAVE SUCCESSFULLY PURCHASED THIS PRODUCT");
-                System.out.println("DO YOU WANT TO GIVE RATING FOR PRODUCT YOU HAVE PURCHASED");
-                boolean input6 = scanner.nextBoolean();
-                if (input6) {
-                    System.out.println("ENTER THE RATING OUT OF 5");
-                    int r = scanner.nextInt();
-                    s.setRating(p, r);
+                boolean isBuyable = s.buy(p, q1);
+                if(isBuyable){
+                    System.out.println("DO YOU WANT TO GIVE RATING FOR PRODUCT YOU HAVE PURCHASED");
+                    boolean input6 = scanner.nextBoolean();
+                    if (input6) {
+                        System.out.println("ENTER THE RATING OUT OF 5");
+                        int r = scanner.nextInt();
+                        s.setRating(p, r);
+                    }
+                    System.out.println("DO YOU WANT TO GIVE REVIEW TO THE PRODUCT YOU HAVE PURCHASED");
+                    boolean input7 = scanner.nextBoolean();
+                    if (input7) {
+                        System.out.println("TYPE THE REVIEW");
+                        scanner.nextLine();
+                        String rev = scanner.nextLine();
+                        s.setReviews(p, rev);
+                    }
                 }
-                System.out.println("DO YOU WANT TO GIVE REVIEW TO THE PRODUCT YOU HAVE PURCHASED");
-                boolean input7 = scanner.nextBoolean();
-                if (input7) {
-                    System.out.println("TYPE THE REVIEW");
-                    String rev = scanner.nextLine();
-                    s.setReviews(p, rev);
-                }
-                System.out.println("DO YOU WANT TO SELECT MORE PRODUCTS");
+
+                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS");
                 boolean input5 = scanner.nextBoolean();
                 if (input5)
                     buy(s);

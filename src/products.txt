@@ -19,15 +19,15 @@ Dell|18|image1.jpg|bakwashitem|400|100|anything1
 knife Sets|19|image1.jpg|bakwashitem|400|100|anything1
 Stainless Steel Knife|20|image1.jpg|bakwashitem|400|100|anything1
 Chopper Knives|21|image1.jpg|bakwashitem|400|100|anything1
-Thomas|22|image1.jpg|bakwashitem|400|96|null
+Thomas|22|image1.jpg|bakwashitem|400|96|anything1
 Advance Engineering|23|image1.jpg|bakwashitem|400|100|anything1
 Eg|24|image1.jpg|bakwashitem|400|100|anything1
 bata|25|image1.jpg|nice item with good reviews|450|10|anything1
 bata|26|image1.jpg|nice item with good reviews|450|10|anything1
 Beaded King Bracelet|27|image1.jpg|nice item with good reviews|450|10|anything1
-Beaded King Bracelet|28|image1.jpg|nice item with good reviews|450|10|anything1
+Beaded King Bracelet|28|image1.jpg|nice item with good reviews|450|5|anything1
 Beaded King Bracelet|29|image1.jpg|nice item with good reviews|450|10|anything1
-AK-47|30|image1.jpg|Take negligible time in between shots|45000|0|dwbdwib122ikb
+AK-47|30|image1.jpg|Take negligible time in between shots|45000|6|anything1
 kurta-pajama|31|image1.jpg|having yellow color , fabric as nice as possible|456|23|raunaksomani
 chota-BheemToy|32|image1.jpg|this is a china product and having all its body cover with plastic|46456|0|raunaksomani
 Titan 110|33|image1.jpg|China Made|454|33|raunaksomani

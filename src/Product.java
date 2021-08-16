@@ -11,25 +11,40 @@ public class Product {
     private float rating;
 
     public Product(int id) {
-        Admin.allAboutProducts(id,this);
-
+        Admin.allAboutProducts(id, this);
     }
 
     public String getName() {
         return this.name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getPrice() {
         return this.price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public int getId() {
         return this.id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public float getRating() {
         float rating = Admin.letGetRating(this);
         return rating;
+    }
+
+    public void setRating(float rate) {
+        this.rating = rate;
     }
 
     public void getDesc() {
@@ -61,22 +76,11 @@ public class Product {
         this.desc = desc;
     }
 
-    public void setName(String name){
-        this.name = name;
-    }
-    public void setId(int id){
-        this.id = id;
-    }
-    public void setPrice(int price){
-        this.price = price;
-    }
-    public void setRating(float rate){
-        this.rating = rate;
-    }
-    public void setPicName(String str){
+    public void setPicName(String str) {
         this.picName = str;
     }
-    public void setRetailerName(String name){
+
+    public void setRetailerName(String name) {
         this.retailerName = name;
     }
 }

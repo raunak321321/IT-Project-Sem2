@@ -5,7 +5,6 @@ public interface FileHandling {
 
     public static void appendSameLine(String filePath, String appendData, boolean isSameLine) {
         try {
-            System.out.println(filePath);
             File f1 = new File(filePath);
 //            Writer output;
             FileWriter fw = new FileWriter(filePath, true);
