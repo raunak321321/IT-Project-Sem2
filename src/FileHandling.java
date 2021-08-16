@@ -1,20 +1,25 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class FileHandling {
+public interface FileHandling {
 
     public static void appendSameLine(String filePath, String appendData, boolean isSameLine) {
         try {
+            System.out.println(filePath);
             File f1 = new File(filePath);
-            Writer output;
-            output = new BufferedWriter(new FileWriter(f1.getName(), true)); // clears file every time
+//            Writer output;
+            FileWriter fw = new FileWriter(filePath, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+//            output = new BufferedWriter(new FileWriter(f1.getName(), true)); // clears file every time
             if (isSameLine) {
-                output.append(appendData);
+                bw.append(appendData);
+//                output.append(appendData);
             } else {
-                output.append("\n" + appendData);
+                bw.append("\n"+appendData);
+//                output.append("\n" + appendData);
             }
 
-            output.close();
+            bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -198,32 +203,5 @@ public class FileHandling {
         }
     }
 
-    public static void UpdateProductFileLine(int id, String str) {
-        String path = "src//products.txt";
-        File myObj = new File(path);
-        Scanner myReader;
-        try {
-            myReader = new Scanner(myObj);
-            String data = "";
-            while (myReader.hasNextLine()) {
-                String temp = "";
-                temp = myReader.nextLine();
-                String[] arrData = temp.split("\\|");
-                if (Integer.parseInt(arrData[1]) == id) {
-                    data = data + str;
-                } else {
-                    data = data + temp;
-                }
-                if (myReader.hasNextLine()) {
-                    data = data + "\n";
-                }
-            }
-            FileWriter fw = new FileWriter(path, false);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(data);
-            bw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    public void updateProductFileLine(int id, String str) ;
 }

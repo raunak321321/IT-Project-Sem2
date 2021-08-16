@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Retailer extends User {
 
     public Retailer(String userName, String password) {
-        super(false, userName, password, false);
+        super(false, userName, password);
     }
 
     public Retailer(String userName, String password, String email) {

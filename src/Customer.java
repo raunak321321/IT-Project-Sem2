@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 public class Customer extends User{
 
     public Customer(String userName, String password) {
-        super(true,userName,password,false);
+        super(true,userName,password);
     }
 
     public Customer(String userName, String password, String email) {

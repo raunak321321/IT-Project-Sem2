@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class Admin {
-    public static void userFileHandling(boolean newUser, String path, boolean isBuyer, boolean isAdmin, String userName, String password, String email,User person) {
+public class Admin implements FileHandling{
+    public static void userFileHandling(boolean newUser, String path, boolean isBuyer, String userName, String password, String email,User person) {
         if (newUser) {
             String filename = path;
             File myObj1 = new File(filename);
@@ -83,7 +83,7 @@ public class Admin {
                     String[] str = scanner.nextLine().split(" ");
                     String password1 = str[1];
                     String name1 = str[0];
-                    User s = new User(isBuyer, name1, password1, isAdmin);
+                    User s = new User(isBuyer, name1, password1);
                     person.setUserName(s.getUserName());
                     person.setPassword(s.getPassword());
                     person.setEmail(s.getEmail());
@@ -104,8 +104,33 @@ public class Admin {
     public static void removeLine(String path,String userName){
         FileHandling.removeLine(path, userName);
     }
-    public static void UpdateProductFileLine(int id, String str){
-        FileHandling.UpdateProductFileLine(id, str);
+    public void updateProductFileLine(int id, String str){
+        String path = "src//products.txt";
+        File myObj = new File(path);
+        Scanner myReader;
+        try {
+            myReader = new Scanner(myObj);
+            String data = "";
+            while (myReader.hasNextLine()) {
+                String temp = "";
+                temp = myReader.nextLine();
+                String[] arrData = temp.split("\\|");
+                if (Integer.parseInt(arrData[1]) == id) {
+                    data = data + str;
+                } else {
+                    data = data + temp;
+                }
+                if (myReader.hasNextLine()) {
+                    data = data + "\n";
+                }
+            }
+            FileWriter fw = new FileWriter(path, false);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(data);
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public static void appendOrWriteChecker(String path, String categoryName, String appendData, String notAppendData, String subCategoryName){
         FileHandling .appendOrWriteChecker(path, categoryName, appendData, notAppendData, subCategoryName);

@@ -1,8 +1,5 @@
 import pictures.Picture;
 
-import java.io.*;
-import java.util.Scanner;
-
 public class Product {
     private String name;
     private int id;
@@ -52,7 +49,8 @@ public class Product {
         int id = this.getId();
         String str = this.name + "|" + this.id + "|" + this.picName + "|" + this.desc + "|" + this.price + "|" + qty + "|" + this.retailerName;
         this.quantity = qty;
-        Admin.UpdateProductFileLine(id, str);
+        Admin admin = new Admin();
+        admin.updateProductFileLine(id, str);
     }
 
     public void getReviews() {
