@@ -12,11 +12,11 @@ public class TestMain {
         System.out.println("ENTER THE CATEGORY OF YOUR CHOICE IN THE LIST BELOW");
         Object.getCategory();
         String category = scanner.nextLine();
-        System.out.println("ENTER THE SUB-CATEGORY OF YOUR CHOICE FROM THE LIST BELOW");
         Object.getSubCategory(category);
+        System.out.println("ENTER THE SUB-CATEGORY OF YOUR CHOICE FROM THE LIST GIVEN ABOVE");
         String subcategory = scanner.nextLine();
-        System.out.println("NOW SELECT THE PRODUCT OF YOUR CHOICE FROM THE LIST BELOW(type the product number)");
         Object.getProducts(subcategory);
+        System.out.println("NOW SELECT THE PRODUCT OF YOUR CHOICE FROM THE LIST GIVEN ABOVE(type the product number)");
         int num = scanner.nextInt();
         Product p = new Product(num);
         System.out.println("IMAGE WILL BE VISIBLE IN NEW DIALOG BOX");
@@ -89,6 +89,7 @@ public class TestMain {
         Scanner scanner = new Scanner(System.in);
         String category, subcategory, productName, description, image;
         int price, quantity;
+        System.out.println("OK SO AS YOU WANT TO SELL YOUR PRODUCT THEN PLEASE GIVE THE FOLLOWING INFO:)");
         System.out.println("ENTER THE CATEGORY ");
         category = scanner.nextLine();
         System.out.println("ENTER THE SUB-CATEGORY");

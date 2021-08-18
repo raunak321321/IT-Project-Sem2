@@ -302,6 +302,13 @@ public class Admin implements FileHandling{
             String data1 = myReader1.nextLine();
             String[] arrData = data1.split("\\|");
             while (!arrData[0].equals(category)) {
+                if(!myReader1.hasNextLine()){
+                    System.out.println("Please enter correct Category name:(");
+                    Scanner scanner = new Scanner(System.in);
+                    String cat = scanner.next();
+                    letGetSubCategory(cat);
+                    return;
+                }
                 data1 = myReader1.nextLine();
                 arrData = data1.split("\\|");
             }
@@ -324,6 +331,13 @@ public class Admin implements FileHandling{
             String data1 = myReader1.nextLine();
             String[] arrData = data1.split("\\|");
             while (!arrData[0].equals(subCategory)) {
+                if(!myReader1.hasNextLine()){
+                    System.out.println("Please enter correct Sub Category name:(");
+                    Scanner scanner = new Scanner(System.in);
+                    String subCat = scanner.next();
+                    letGetProducts(subCat);
+                    return;
+                }
                 data1 = myReader1.nextLine();
                 arrData = data1.split("\\|");
             }

@@ -1,6 +1,2 @@
-fashion|Dress, watch, shoes, goggle, Bracelet
-electronics|Televisions, laptops
-kitchen-utensils|Chef's knife
-stationary|books
-Weapon|Pistol
-Toys|Toy-Plane
+fashion|Dress, watch, shoes, goggle
+electronics|Televisions
