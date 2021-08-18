@@ -3,10 +3,6 @@ import java.util.Scanner;
 
 public class TestMain {
 
-//    public static void admin(Administrator a){
-//        System.out.println("Profit you earn till date is: "+a.getProfit());
-//    }
-
     public static void buy(Customer s) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ENTER THE CATEGORY OF YOUR CHOICE IN THE LIST BELOW");
@@ -21,12 +17,11 @@ public class TestMain {
         Product p = new Product(num);
         System.out.println("IMAGE WILL BE VISIBLE IN NEW DIALOG BOX");
         p.getImage();
-//        System.out.println("DESCRIPTION OF THE PRODUCT:");
         p.getDesc();
         System.out.print("PRICE OF THE PRODUCT:");
         int price = p.getPrice();
         System.out.println(price);
-        System.out.println("DO YOU WISH TO SEE THE REVIEWS AND RATING OF THIS PRODUCT(type true or false)");
+        System.out.println("DO YOU WISH TO SEE THE REVIEWS AND RATING OF THIS PRODUCT(type true or false)?");
         boolean input2 = scanner.nextBoolean();
         if (input2) {
             System.out.print("RATING:");
@@ -44,7 +39,7 @@ public class TestMain {
                 System.out.println("ENTER THE QUANTITY OF THE PRODUCT YOU WISH TO BUY");
                 int q = scanner.nextInt();
                 s.addToCart(p, q);
-                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS");
+                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS?");
                 boolean input4 = scanner.nextBoolean();
                 if (input4)
                     buy(s);
@@ -53,15 +48,15 @@ public class TestMain {
                 System.out.println("ENTER THE QUANTITY OF THE PRODUCT YOU WISH TO BUY");
                 int q1 = scanner.nextInt();
                 boolean isBuyable = s.buy(p, q1);
-                if(isBuyable){
-                    System.out.println("DO YOU WANT TO GIVE RATING FOR PRODUCT YOU HAVE PURCHASED");
+                if (isBuyable) {
+                    System.out.println("DO YOU WANT TO GIVE RATING FOR PRODUCT YOU HAVE PURCHASED?");
                     boolean input6 = scanner.nextBoolean();
                     if (input6) {
                         System.out.println("ENTER THE RATING OUT OF 5");
                         int r = scanner.nextInt();
                         s.setRating(p, r);
                     }
-                    System.out.println("DO YOU WANT TO GIVE REVIEW TO THE PRODUCT YOU HAVE PURCHASED");
+                    System.out.println("DO YOU WANT TO GIVE REVIEW TO THE PRODUCT YOU HAVE PURCHASED?");
                     boolean input7 = scanner.nextBoolean();
                     if (input7) {
                         System.out.println("TYPE THE REVIEW");
@@ -71,16 +66,26 @@ public class TestMain {
                     }
                 }
 
-                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS");
+                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS?");
                 boolean input5 = scanner.nextBoolean();
                 if (input5)
                     buy(s);
             }
             case 3 -> buy(s);
         }
-        System.out.println("DO YOU WANT TO BUY THE PRODUCTS IN YOUR CART");
+        System.out.println("DO YOU WANT TO SEE YOUR CART?");
         boolean input3 = scanner.nextBoolean();
         if (input3) {
+            s.viewCart();
+        }
+        System.out.println("DO YOU WANT TO SEE YOUR HISTORY OF BUYED PRODUCT?");
+        boolean input4 = scanner.nextBoolean();
+        if (input4) {
+            s.viewPurchaseHistory();
+        }
+        System.out.println("DO YOU WANT TO BUY THE PRODUCTS IN YOUR CART?");
+        boolean input5 = scanner.nextBoolean();
+        if (input5) {
             s.buyCartProd();
         }
     }
@@ -105,7 +110,7 @@ public class TestMain {
         System.out.println("ENTER THE TOTAL QUANTITY OF PRODUCT");
         quantity = scanner.nextInt();
         b.sellItem(category, subcategory, productName, description, image, price, quantity);
-        System.out.println("DO YOU WANT TO SELL MORE PRODUCTS");
+        System.out.println("DO YOU WANT TO SELL MORE PRODUCTS?");
         boolean input7 = scanner.nextBoolean();
         if (input7)
             sell(b);
@@ -116,22 +121,11 @@ public class TestMain {
         Scanner scanner = new Scanner(System.in);
         boolean user;
         Customer s;
-//        System.out.println("You are admin!(type true if yes and false otherwise)");
-//        boolean isAdmin = scanner.nextBoolean();
-//        if(isAdmin){
-//            Administrator a;
-//            System.out.println("ENTER USER-NAME(without space)");
-//            String name = scanner.next();
-//            System.out.println("ENTER PASSWORD");
-//            String password = scanner.next();
-//            a = new Administrator(name, password);
-//            admin(a);
-//        }
         System.out.println("WELCOME TO OUR E COMMERCE WEBSITE");
-        System.out.println("DO YOU WANT TO BUY OR SELL PRODUCTS(type true to buy and false to sell)");
+        System.out.println("DO YOU WANT TO BUY OR SELL PRODUCTS(type true to buy and false to sell)?");
         boolean input = scanner.nextBoolean();
         if (input) {
-            System.out.println("ARE YOU A NEW USER(type true or false)");
+            System.out.println("ARE YOU A NEW USER(type true or false)?");
             user = scanner.nextBoolean();
             if (user) {
                 System.out.println("ENTER  USER-NAME(without space)");
@@ -151,10 +145,10 @@ public class TestMain {
             buy(s);
         } else {
             Retailer b;
-            System.out.println("ARE YOU A NEW USER(type true or false)");
+            System.out.println("ARE YOU A NEW USER(type true or false)?");
             boolean user1 = scanner.nextBoolean();
             if (user1) {
-                System.out.println("ENTER  USER-NAME(without space)");
+                System.out.println("ENTER  USER-NAME(without space)?");
                 String name = scanner.next();
                 System.out.println("ENTER PASSWORD");
                 String password = scanner.next();

@@ -1,23 +1,19 @@
 import java.io.*;
-import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-public class Customer extends User{
+public class Customer extends User {
 
     public Customer(String userName, String password) {
-        super(true,userName,password);
+        super(true, userName, password);
     }
 
     public Customer(String userName, String password, String email) {
-        super(true,userName,password,email);
+        super(true, userName, password, email);
     }
 
     public void setRating(Product p, int val) {
         int id = p.getId();
-        // there is some doubt that what we can do means there are two option that user
-        // can set rating without buy the product or can set after buying only
-
         String notAppendData = "|" + super.getUserName() + "-" + val;
         String appendData = id + "|" + super.getUserName() + "-" + val;
         String path = "src//ratings.txt";
@@ -26,9 +22,6 @@ public class Customer extends User{
 
     public void setReviews(Product p, String str) {
         int id = p.getId();
-        // there is some doubt that what we can do means there are two option that user
-        // can set rating without buy the product or can set after buying only
-
         String notAppendData = "|" + super.getUserName() + "-" + str;
         String appendData = id + "|" + super.getUserName() + "-" + str;
         String path = "src//reviews.txt";
@@ -42,8 +35,6 @@ public class Customer extends User{
             return;
         }
         int id = p.getId();
-//    there is some doubt that what we can do means there are two option that user
-//    can set rating without buy the product or can set after buying only
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         String notAppendData = "|" + "Pid-" + id + " qty-" + quantity + " " + dtf.format(now);
@@ -58,8 +49,7 @@ public class Customer extends User{
         if (quantity > qty) {
             System.out.println("There is only " + qty + " Quantity of this product.");
             return false;
-        }
-        else{
+        } else {
             int id = p.getId();
             DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
             LocalDateTime now = LocalDateTime.now();
@@ -71,7 +61,7 @@ public class Customer extends User{
             int left = qty - quantity;
             p.setQuantity(left);
 
-            Admin.updateEarnAmount(p.getPrice()/100f*quantity);
+            Admin.updateEarnAmount(p.getPrice() / 100f * quantity);
             return true;
         }
 
@@ -81,11 +71,11 @@ public class Customer extends User{
         Admin.letBuyCartProd(this);
     }
 
-    public void viewCart(){
+    public void viewCart() {
         Admin.letViewCart(this);
     }
 
-    public void viewPurchaseHistory(){
+    public void viewPurchaseHistory() {
         Admin.letViewPurchaseHistory(this);
     }
 }

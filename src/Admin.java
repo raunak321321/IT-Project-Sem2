@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class Admin implements FileHandling{
-    public static void userFileHandling(boolean newUser, String path, boolean isBuyer, String userName, String password, String email,User person) {
+public class Admin implements FileHandling {
+    public static void userFileHandling(boolean newUser, String path, boolean isBuyer, String userName, String password, String email, User person) {
         if (newUser) {
             String filename = path;
             File myObj1 = new File(filename);
@@ -95,49 +95,26 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static void appendOrWrite(String path,int id,String appendData,String notAppendData){
+    public static void appendOrWrite(String path, int id, String appendData, String notAppendData) {
         FileHandling.appendOrWrite(path, id, appendData, notAppendData);
     }
-    public static void appendOrWrite(String path, String userName, String appendData, String notAppendData){
-        FileHandling.appendOrWrite(path,userName,appendData,notAppendData);
+
+    public static void appendOrWrite(String path, String userName, String appendData, String notAppendData) {
+        FileHandling.appendOrWrite(path, userName, appendData, notAppendData);
     }
-    public static void removeLine(String path,String userName){
+
+    public static void removeLine(String path, String userName) {
         FileHandling.removeLine(path, userName);
     }
-    public void updateProductFileLine(int id, String str){
-        String path = "src//products.txt";
-        File myObj = new File(path);
-        Scanner myReader;
-        try {
-            myReader = new Scanner(myObj);
-            String data = "";
-            while (myReader.hasNextLine()) {
-                String temp = "";
-                temp = myReader.nextLine();
-                String[] arrData = temp.split("\\|");
-                if (Integer.parseInt(arrData[1]) == id) {
-                    data = data + str;
-                } else {
-                    data = data + temp;
-                }
-                if (myReader.hasNextLine()) {
-                    data = data + "\n";
-                }
-            }
-            FileWriter fw = new FileWriter(path, false);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(data);
-            bw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+    public static void appendOrWriteChecker(String path, String categoryName, String appendData, String notAppendData, String subCategoryName) {
+        FileHandling.appendOrWriteChecker(path, categoryName, appendData, notAppendData, subCategoryName);
     }
-    public static void appendOrWriteChecker(String path, String categoryName, String appendData, String notAppendData, String subCategoryName){
-        FileHandling .appendOrWriteChecker(path, categoryName, appendData, notAppendData, subCategoryName);
-    }
-    public static void appendSameLine(String path2, String appendData2, boolean isSameLine){
+
+    public static void appendSameLine(String path2, String appendData2, boolean isSameLine) {
         FileHandling.appendSameLine(path2, appendData2, isSameLine);
     }
+
     public static void updateEarnAmount(float amountToBeAdd) throws IOException {
         double amount = 0;
         String path5 = "src//earnTillDate.txt";
@@ -158,7 +135,7 @@ public class Admin implements FileHandling{
         bw1.close();
     }
 
-    public static void letBuyCartProd(Customer customer){
+    public static void letBuyCartProd(Customer customer) {
         String path = "src//usersCart.txt";
         File myObj = new File(path);
         Scanner myReader1;
@@ -192,17 +169,17 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static void letViewCart(Customer customer){
+    public static void letViewCart(Customer customer) {
         String filename1 = "src//usersCart.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         String userName = customer.getUserName();
         try {
             myReader1 = new Scanner(myObj);
-            if (myReader1.hasNextLine()){
+            if (myReader1.hasNextLine()) {
                 String data1 = myReader1.nextLine();
                 String[] arrData = data1.split("\\|");
-                while (myReader1.hasNextLine() && arrData[0].equals(userName)) {
+                while (myReader1.hasNextLine() && !arrData[0].equals(userName)) {
                     data1 = myReader1.nextLine();
                     arrData = data1.split("\\|");
                 }
@@ -218,14 +195,13 @@ public class Admin implements FileHandling{
                         int qty = Integer.parseInt(str[1].substring(4));
                         String date = str[2];
                         Product p = new Product(id);
-                        System.out.println(p.getName() + "-->id: " + id + " , Qty: "+qty + "at " + date);
+                        System.out.println(p.getName() + "-->id: " + id + " , Qty: " + qty + " at " + date);
                     }
                     System.out.println();
                 } else {
                     System.out.println("Your cart is empty.");
                 }
-            }
-            else{
+            } else {
                 System.out.println("Your cart is empty");
             }
 
@@ -234,17 +210,17 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static void letViewPurchaseHistory(Customer customer){
+    public static void letViewPurchaseHistory(Customer customer) {
         String filename1 = "src//buyedProducts.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
         String userName = customer.getUserName();
         try {
             myReader1 = new Scanner(myObj);
-            if (myReader1.hasNextLine()){
+            if (myReader1.hasNextLine()) {
                 String data1 = myReader1.nextLine();
                 String[] arrData = data1.split("\\|");
-                while (myReader1.hasNextLine() && arrData[0].equals(userName)) {
+                while (myReader1.hasNextLine() && !arrData[0].equals(userName)) {
                     data1 = myReader1.nextLine();
                     arrData = data1.split("\\|");
                 }
@@ -256,18 +232,17 @@ public class Admin implements FileHandling{
                             System.out.print("Your History: ");
                         }
                         String[] str = arrData[i].split(" ");
-                        int id = Integer.parseInt(str[0].substring(5));
+                        int id = Integer.parseInt(str[0].substring(8));
                         int qty = Integer.parseInt(str[1].substring(4));
                         String date = str[2];
                         Product p = new Product(id);
-                        System.out.println(p.getName() + "-->id: " + id + " , Qty: "+qty + "at " + date);
+                        System.out.println(p.getName() + "-->id: " + id + " , Qty: " + qty + " at " + date);
                     }
                     System.out.println();
                 } else {
                     System.out.println("You haven't buy any product.");
                 }
-            }
-            else{
+            } else {
                 System.out.println("You haven't buy any product.");
             }
 
@@ -276,7 +251,7 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static void letGetCategory(){
+    public static void letGetCategory() {
         String filename1 = "src//CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -293,7 +268,7 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static void letGetSubCategory(String category){
+    public static void letGetSubCategory(String category) {
         String filename1 = "src//CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -302,7 +277,7 @@ public class Admin implements FileHandling{
             String data1 = myReader1.nextLine();
             String[] arrData = data1.split("\\|");
             while (!arrData[0].equals(category)) {
-                if(!myReader1.hasNextLine()){
+                if (!myReader1.hasNextLine()) {
                     System.out.println("Please enter correct Category name:(");
                     Scanner scanner = new Scanner(System.in);
                     String cat = scanner.next();
@@ -322,7 +297,7 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static void letGetProducts(String subCategory){
+    public static void letGetProducts(String subCategory) {
         String filename1 = "src//SubCategoryAndProducts.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -331,7 +306,7 @@ public class Admin implements FileHandling{
             String data1 = myReader1.nextLine();
             String[] arrData = data1.split("\\|");
             while (!arrData[0].equals(subCategory)) {
-                if(!myReader1.hasNextLine()){
+                if (!myReader1.hasNextLine()) {
                     System.out.println("Please enter correct Sub Category name:(");
                     Scanner scanner = new Scanner(System.in);
                     String subCat = scanner.next();
@@ -351,7 +326,7 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static void allAboutProducts(int id,Product product){
+    public static void allAboutProducts(int id, Product product) {
         String filename1 = "src//products.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -380,7 +355,7 @@ public class Admin implements FileHandling{
         }
     }
 
-    public static float letGetRating(Product product){
+    public static float letGetRating(Product product) {
         float rating = 0;
         int n = product.getId();
         String filename1 = "src//ratings.txt";
@@ -405,13 +380,12 @@ public class Admin implements FileHandling{
                 return 0.0f;
             }
         } catch (FileNotFoundException e) {
-//            System.out.println("hello");
             e.printStackTrace();
         }
         return rating;
     }
 
-    public static void letGetReviews(Product product){
+    public static void letGetReviews(Product product) {
         String filename1 = "src//reviews.txt";
         File myObj = new File(filename1);
         Scanner myReader1;
@@ -442,6 +416,7 @@ public class Admin implements FileHandling{
             e.printStackTrace();
         }
     }
+
     public static int letUpdateId() throws IOException {
         int id = 0;
         String path4 = "src//ids.txt";
@@ -462,5 +437,34 @@ public class Admin implements FileHandling{
         bw.write(data);
         bw.close();
         return id;
+    }
+
+    public void updateProductFileLine(int id, String str) {
+        String path = "src//products.txt";
+        File myObj = new File(path);
+        Scanner myReader;
+        try {
+            myReader = new Scanner(myObj);
+            String data = "";
+            while (myReader.hasNextLine()) {
+                String temp = "";
+                temp = myReader.nextLine();
+                String[] arrData = temp.split("\\|");
+                if (Integer.parseInt(arrData[1]) == id) {
+                    data = data + str;
+                } else {
+                    data = data + temp;
+                }
+                if (myReader.hasNextLine()) {
+                    data = data + "\n";
+                }
+            }
+            FileWriter fw = new FileWriter(path, false);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(data);
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

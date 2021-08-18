@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.Scanner;
-
 public class Object {
     public static void getCategory() {
         Admin.letGetCategory();

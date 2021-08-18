@@ -6,18 +6,13 @@ public interface FileHandling {
     public static void appendSameLine(String filePath, String appendData, boolean isSameLine) {
         try {
             File f1 = new File(filePath);
-//            Writer output;
             FileWriter fw = new FileWriter(filePath, true);
             BufferedWriter bw = new BufferedWriter(fw);
-//            output = new BufferedWriter(new FileWriter(f1.getName(), true)); // clears file every time
             if (isSameLine) {
                 bw.append(appendData);
-//                output.append(appendData);
             } else {
-                bw.append("\n"+appendData);
-//                output.append("\n" + appendData);
+                bw.append("\n" + appendData);
             }
-
             bw.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -202,5 +197,5 @@ public interface FileHandling {
         }
     }
 
-    public void updateProductFileLine(int id, String str) ;
+    public void updateProductFileLine(int id, String str);
 }

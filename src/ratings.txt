@@ -1,7 +1,4 @@
-1|Raunak1-2|Raunak2-3|haa2a-4|haa2a-4|Raju33213-5
-2|haa2a-3
-4|haa2a-4|haa2a-4|haa2a-4|haa2a-4|haa2a-4|haa2a-4|haa2a-4|haa2a-4
-5|haa2a-4|Raunak1-4
+1|Raunak7-2|Raunak7-3|Raju33213-5
+5|Raunak7-4
 10|Raju33213-5|Raju33213-5
-28|fswfsefewdw-4
-30|Ritik322-5
+15|Ritik322-4
