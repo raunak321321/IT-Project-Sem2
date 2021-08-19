@@ -25,7 +25,7 @@ public class Admin implements FileHandling {
                     if (match) {
                         System.out.println("User already present with same username(<:>).");
                         Scanner scanner = new Scanner(System.in);
-                        System.out.print("Enter details again: ");
+                        System.out.print("Enter details again:(like-- username password and then email with space b/w them without press enter in between)");
                         String[] str = scanner.nextLine().split(" ");
                         String password1 = str[1];
                         String email1 = str[2];
@@ -79,7 +79,7 @@ public class Admin implements FileHandling {
                 if (!match) {
                     System.out.println("There are no user with this login details.");
                     Scanner scanner = new Scanner(System.in);
-                    System.out.println("Enter name again and password again");
+                    System.out.println("Enter name again and password again with space b/w them");
                     String[] str = scanner.nextLine().split(" ");
                     String password1 = str[1];
                     String name1 = str[0];

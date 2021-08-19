@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class TestMain {
@@ -49,14 +50,14 @@ public class TestMain {
                 int q1 = scanner.nextInt();
                 boolean isBuyable = s.buy(p, q1);
                 if (isBuyable) {
-                    System.out.println("DO YOU WANT TO GIVE RATING FOR PRODUCT YOU HAVE PURCHASED?");
+                    System.out.println("DO YOU WANT TO GIVE RATING FOR PRODUCT YOU HAVE PURCHASED?(true or false only");
                     boolean input6 = scanner.nextBoolean();
                     if (input6) {
                         System.out.println("ENTER THE RATING OUT OF 5");
                         int r = scanner.nextInt();
                         s.setRating(p, r);
                     }
-                    System.out.println("DO YOU WANT TO GIVE REVIEW TO THE PRODUCT YOU HAVE PURCHASED?");
+                    System.out.println("DO YOU WANT TO GIVE REVIEW TO THE PRODUCT YOU HAVE PURCHASED?(true or false only)");
                     boolean input7 = scanner.nextBoolean();
                     if (input7) {
                         System.out.println("TYPE THE REVIEW");
@@ -66,24 +67,24 @@ public class TestMain {
                     }
                 }
 
-                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS?");
+                System.out.println("DO YOU WANT TO SELECT ANOTHER PRODUCTS?(true or false only)");
                 boolean input5 = scanner.nextBoolean();
                 if (input5)
                     buy(s);
             }
             case 3 -> buy(s);
         }
-        System.out.println("DO YOU WANT TO SEE YOUR CART?");
+        System.out.println("DO YOU WANT TO SEE YOUR CART?(true or false only)");
         boolean input3 = scanner.nextBoolean();
         if (input3) {
             s.viewCart();
         }
-        System.out.println("DO YOU WANT TO SEE YOUR HISTORY OF BUYED PRODUCT?");
+        System.out.println("DO YOU WANT TO SEE YOUR HISTORY OF BUYED PRODUCT?(true or false only)");
         boolean input4 = scanner.nextBoolean();
         if (input4) {
             s.viewPurchaseHistory();
         }
-        System.out.println("DO YOU WANT TO BUY THE PRODUCTS IN YOUR CART?");
+        System.out.println("DO YOU WANT TO BUY THE PRODUCTS IN YOUR CART?(true or false only)");
         boolean input5 = scanner.nextBoolean();
         if (input5) {
             s.buyCartProd();
@@ -111,7 +112,7 @@ public class TestMain {
         System.out.println("ENTER THE TOTAL QUANTITY OF PRODUCT");
         quantity = scanner.nextInt();
         b.sellItem(category, subcategory, productName, description, image, price, quantity);
-        System.out.println("DO YOU WANT TO SELL MORE PRODUCTS?");
+        System.out.println("DO YOU WANT TO SELL MORE PRODUCTS?(true or false only)");
         boolean input7 = scanner.nextBoolean();
         if (input7)
             sell(b);
@@ -123,6 +124,8 @@ public class TestMain {
         boolean user;
         Customer s;
         System.out.println("WELCOME TO OUR E COMMERCE WEBSITE");
+        System.out.println("READ ALL THE INSTRUCTIONS CAREFULLY:)");
+        System.out.println("USERNAME, PASSWORD, AND EMAIL MUST NOT CONTAIN SPACE BETWEEN THEM ");
         System.out.println("DO YOU WANT TO BUY OR SELL PRODUCTS(type true to buy and false to sell)?");
         boolean input = scanner.nextBoolean();
         if (input) {

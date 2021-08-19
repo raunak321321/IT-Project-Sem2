@@ -4,3 +4,4 @@ shoes|Reebok(id=7),Nike(id=8),Adidas(id=9),Bata(id=10),Sketchers(full-size)(id=1
 goggle|Tom-Ford(id=12),Oliver-Peoples(id=13)
 Televisions|Redmi(id=14),Realme(id=15)
 Toy-Car|AudiCar(16)
+laptop|Acer Laptop(17)
