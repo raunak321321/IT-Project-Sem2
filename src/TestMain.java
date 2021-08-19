@@ -103,8 +103,9 @@ public class TestMain {
         productName = scanner.nextLine();
         System.out.println("ENTER THE DESCRIPTION OF THE PRODUCT");
         description = scanner.nextLine();
-        System.out.println("ENTER THE IMAGE NAME");
+        System.out.println("ENTER THE IMAGE NAME AND PUT THE SAME IMAGE TO 'project images' folder of this site.");
         image = scanner.nextLine();
+        image = "project images//" + image;
         System.out.println("ENTER THE PRICE");
         price = scanner.nextInt();
         System.out.println("ENTER THE TOTAL QUANTITY OF PRODUCT");

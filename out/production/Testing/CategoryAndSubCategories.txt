@@ -1,2 +1,4 @@
 fashion|Dress, watch, shoes, goggle
 electronics|Televisions
+Toy|Toy-Car
+Electronics|Laptop
