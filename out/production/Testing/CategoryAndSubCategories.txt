@@ -1,3 +1,3 @@
 fashion|Dress, watch, shoes, goggle
-electronics|Televisions, Laptop
+electronics|Televisions, laptop
 Toy|Toy-Car

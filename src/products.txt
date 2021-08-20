@@ -1,17 +1,17 @@
-Saree|1|project images//Yellow Saree.jpg|Aadvika Women's Art Silk Saree With Unstitched Blouse Piece(Yellow)|1200|93|raunaksomani
-pajama(full-size)|2|project images//Pajamas.jpeg|Super Combed Cotton Checkered Checkmate Pyjama for men|200|100|raunaksomani
-jeans|3|project images//Jeans.jpeg|Men's Slim Fit Stretchable Jeans|600|99|raunaksomani
-Apple-Model222|4|project images//Apple Watch.jpg|Apple Watch SE (GPS, 40mm) - Space Grey Aluminium Case with Black Sport Band|4000|99|raunaksomani
-Xiaomi|5|project images//Xiaomi Watch.jpg|Watch Revolve (Active Blue) - 1.39" AMOLED Display, SpO2, GPS and Sleep|4500|82|raunaksomani
-AI-Watch|6|project images//AI watch.jpg|Full Touch 1.4 inch Smart Watch 400 Nits Peak Brightness Metal Body 8 Days Battery Life with 24*7 Heart Rate monitoring IPX7 with Blood Oxygen, Fitness, Sports & Sleep Tracking (Black and White)|5000|100|raunaksomani
-Reebok|7|project images//Reebok Shoes.jpg|Reebok Men's Splasher Running Shoe(Red)|4000|100|raunaksomani
-Nike|8|project images//Nike Shoes.jpg|Nike Men's Revolution Running Shoes(white and black)|4300|96|Anthony
-Adidas|9|project images//Adidas Shoes.jpg|Adidas Men's Drogo M Running Shoe(Black)|4500|91|Anthony
-Bata|10|project images//Bata Shoes.jpg|BATA Men's Jalsa Laser Formal Shoes(White)|4000|50|Anthony
-Sketchers(full-size)|11|project images//Sketchers Shoes.jpg|Skechers Men's Go Run Tr-Torch Shoes(White)|400|1|Anthony
-Tom-Ford|12|project images//Tom Ford Googles.jpg|Men's & Boy's Square Sunglasses|900|98|Anthony
-Oliver-Peoples |13|project images//Oliver Peoples Googles.jpg|Polarized Sunglasses Men Women Retro Flat Top Square Driving Glasses|1000|98|Anthony
-Redmi|14|project images//redmi_television.jpg|Mi 80 cm (32 inches) HD Ready Android Smart LED TV 4A PRO|40000|86|Anthony
-Realme|15|project images//realme_television.jpg|Realme 108 cm (43 Inches) Full HD Smart Certified Android LED TV TV 43 (Black)|50000|94|Anthony
-AudiCar|16|project images//Audi-ToyCar.jpg|Kinsmart Audi r8 1:36 Scale 5 inch toy car model122|599|0|Anthony322
-Acer Laptop|17|project images//acer_laptop.jpg|Amd ryzen5 3550 u 8 gb ram with rega x graphic card ,2.5ghz|450000|2|Gopala322
+Saree|1|product images//Yellow Saree.jpg|Aadvika Women's Art Silk Saree With Unstitched Blouse Piece(Yellow)|1200|93|raunaksomani
+pajama(full-size)|2|product images//Pajamas.jpeg|Super Combed Cotton Checkered Checkmate Pyjama for men|200|100|raunaksomani
+jeans|3|product images//Jeans.jpeg|Men's Slim Fit Stretchable Jeans|600|99|raunaksomani
+Apple-Model222|4|product images//Apple Watch.jpg|Apple Watch SE (GPS, 40mm) - Space Grey Aluminium Case with Black Sport Band|4000|99|raunaksomani
+Xiaomi|5|product images//Xiaomi Watch.jpg|Watch Revolve (Active Blue) - 1.39" AMOLED Display, SpO2, GPS and Sleep|4500|82|raunaksomani
+AI-Watch|6|product images//AI watch.jpg|Full Touch 1.4 inch Smart Watch 400 Nits Peak Brightness Metal Body 8 Days Battery Life with 24*7 Heart Rate monitoring IPX7 with Blood Oxygen, Fitness, Sports & Sleep Tracking (Black and White)|5000|100|raunaksomani
+Reebok|7|product images//Reebok Shoes.jpg|Reebok Men's Splasher Running Shoe(Red)|4000|100|raunaksomani
+Nike|8|product images//Nike Shoes.jpg|Nike Men's Revolution Running Shoes(white and black)|4300|96|Anthony
+Adidas|9|product images//Adidas Shoes.jpg|Adidas Men's Drogo M Running Shoe(Black)|4500|91|Anthony
+Bata|10|product images//Bata Shoes.jpg|BATA Men's Jalsa Laser Formal Shoes(White)|4000|50|Anthony
+Sketchers(full-size)|11|product images//Sketchers Shoes.jpg|Skechers Men's Go Run Tr-Torch Shoes(White)|400|1|Anthony
+Tom-Ford|12|product images//Tom Ford Googles.jpg|Men's & Boy's Square Sunglasses|900|98|Anthony
+Oliver-Peoples |13|product images//Oliver Peoples Googles.jpg|Polarized Sunglasses Men Women Retro Flat Top Square Driving Glasses|1000|98|Anthony
+Redmi|14|product images//redmi_television.jpg|Mi 80 cm (32 inches) HD Ready Android Smart LED TV 4A PRO|40000|86|Anthony
+Realme|15|product images//realme_television.jpg|Realme 108 cm (43 Inches) Full HD Smart Certified Android LED TV TV 43 (Black)|50000|94|Anthony
+AudiCar|16|product images//Audi-ToyCar.jpg|Kinsmart Audi r8 1:36 Scale 5 inch toy car model122|599|0|Anthony322
+Acer Laptop|17|product images//acer_laptop.jpg|Amd ryzen5 3550 u 8 gb ram with rega x graphic card ,2.5ghz|450000|2|Gopala322
