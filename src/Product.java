@@ -10,9 +10,12 @@ public class Product {
     private String retailerName;
     private float rating;
 
+    //    constructor
     public Product(int id) {
-        Admin.allAboutProducts(id, this);
+        Admin.allAboutProducts(id, this); // call Admin class method for instance variable to initialize
     }
+
+//    below all methods are setter or getter methods
 
     public String getName() {
         return this.name;
@@ -65,7 +68,7 @@ public class Product {
         String str = this.name + "|" + this.id + "|" + this.picName + "|" + this.desc + "|" + this.price + "|" + qty + "|" + this.retailerName;
         this.quantity = qty;
         Admin admin = new Admin();
-        admin.updateProductFileLine(id, str);
+        admin.updateProductFileLine(id, str); // calls Admin class method
     }
 
     public void getReviews() {

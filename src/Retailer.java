@@ -3,14 +3,17 @@ import java.util.Scanner;
 
 public class Retailer extends User {
 
+    //    have two constructors for new and old user
     public Retailer(String userName, String password) {
-        super(false, userName, password);
+        super(false, userName, password); // calls super class constructors
     }
 
     public Retailer(String userName, String password, String email) {
-        super(false, userName, password, email);
+        super(false, userName, password, email); // calls super class constructors
     }
 
+
+    //    this method is used to update files and add information regaring that product
     public void sellItem(String categoryName, String subCategoryName, String productName, String desc, String imageName, int price, int quantity) throws IOException {
         int id = Admin.letUpdateId();
 

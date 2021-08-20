@@ -1,8 +1,11 @@
 import java.io.*;
 import java.util.Scanner;
 
+
+//this class mainly used fileHandling system like FileWriter and BufferedWrite and use them to append or reWrite some data
 public interface FileHandling {
 
+    //    this method first take arguments like have to append the data in the same line or not and accordingly just append the data
     public static void appendSameLine(String filePath, String appendData, boolean isSameLine) {
         try {
             File f1 = new File(filePath);
@@ -19,6 +22,7 @@ public interface FileHandling {
         }
     }
 
+    //    this method first checks whether there is a need of appending or reWriting and accordingly did his job
     public static void appendOrWrite(String path, int id, String appendData, String notAppendData) {
         File myObj = new File(path);
         Scanner myReader1;
@@ -68,6 +72,7 @@ public interface FileHandling {
         }
     }
 
+    //    this method just overloading example of just above method but the conditions checks is different
     public static void appendOrWrite(String path, String userName, String appendData, String notAppendData) {
         File myObj = new File(path);
         Scanner myReader1;
@@ -117,6 +122,7 @@ public interface FileHandling {
         }
     }
 
+    //    this method works some sort similar to that above two methods with different checks
     public static void appendOrWriteChecker(String path, String userName, String appendData, String notAppendData, String subCheck) {
         File myObj = new File(path);
         Scanner myReader1;
@@ -170,6 +176,7 @@ public interface FileHandling {
         }
     }
 
+    //    this method is used to remove a particular line this line is taken as a argument
     public static void removeLine(String path, String userName) {
         File myObj = new File(path);
         Scanner myReader;
@@ -197,5 +204,6 @@ public interface FileHandling {
         }
     }
 
+    //    this method is implement in Admin class
     public void updateProductFileLine(int id, String str);
 }

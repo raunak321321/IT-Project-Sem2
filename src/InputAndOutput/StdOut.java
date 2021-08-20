@@ -7,25 +7,26 @@
  *
  ******************************************************************************/
 package InputAndOutput;
+
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
 /**
- *  This class provides methods for printing strings and numbers to standard output.
- *  <p>
- *  <b>Getting started.</b>
- *  To use this class, you must have {@code StdOut.class} in your
- *  Java classpath. If you used our autoinstaller, you should be all set.
- *  Otherwise, either download
- *  <a href = "https://introcs.cs.princeton.edu/java/code/stdlib.jar">stdlib.jar</a>
- *  and add to your Java classpath or download
- *  <a href = "https://introcs.cs.princeton.edu/java/stdlib/StdOut.java">StdOut.java</a>
- *  and put a copy in your working directory.
- *  <p>
- *  Here is an example program that uses {@code StdOut}:
- *  <pre>
+ * This class provides methods for printing strings and numbers to standard output.
+ * <p>
+ * <b>Getting started.</b>
+ * To use this class, you must have {@code StdOut.class} in your
+ * Java classpath. If you used our autoinstaller, you should be all set.
+ * Otherwise, either download
+ * <a href = "https://introcs.cs.princeton.edu/java/code/stdlib.jar">stdlib.jar</a>
+ * and add to your Java classpath or download
+ * <a href = "https://introcs.cs.princeton.edu/java/stdlib/StdOut.java">StdOut.java</a>
+ * and put a copy in your working directory.
+ * <p>
+ * Here is an example program that uses {@code StdOut}:
+ * <pre>
  *   public class TestStdOut {
  *       public static void main(String[] args) {
  *           int a = 17;
@@ -36,28 +37,28 @@ import java.util.Locale;
  *       }
  *   }
  *  </pre>
- *  <p>
- *  <b>Differences with System.out.</b>
- *  The behavior of {@code StdOut} is similar to that of {@link System#out},
- *  but there are a few technical differences:
- *  <ul>
- *  <li> {@code StdOut} coerces the character-set encoding to UTF-8,
- *       which is a standard character encoding for Unicode.
- *  <li> {@code StdOut} coerces the locale to {@link Locale#US},
- *       for consistency with {@link StdIn}, {@link Double#parseDouble(String)},
- *       and floating-point literals.
- *  <li> {@code StdOut} <em>flushes</em> standard output after each call to
- *       {@code print()} so that text will appear immediately in the terminal.
- *  </ul>
- *  <p>
- *  <b>Reference.</b>
- *  For additional documentation,
- *  see <a href="https://introcs.cs.princeton.edu/15inout">Section 1.5</a> of
- *  <em>Computer Science: An Interdisciplinary Approach</em>
- *  by Robert Sedgewick and Kevin Wayne.
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
+ * <p>
+ * b>Differences with System.out.</b>
+ * he behavior of {@code StdOut} is similar to that of {@link System#out},
+ * ut there are a few technical differences:
+ * <ul>
+ * <li> {@code StdOut} coerces the character-set encoding to UTF-8,
+ *      which is a standard character encoding for Unicode.
+ * <li> {@code StdOut} coerces the locale to {@link Locale#US},
+ *      for consistency with {@link StdIn}, {@link Double#parseDouble(String)},
+ *      and floating-point literals.
+ * <li> {@code StdOut} <em>flushes</em> standard output after each call to
+ *      {@code print()} so that text will appear immediately in the terminal.
+ * </ul>
+ * p>
+ * <b>Reference.</b>
+ * For additional documentation,
+ * see <a href="https://introcs.cs.princeton.edu/15inout">Section 1.5</a> of
+ * <em>Computer Science: An Interdisciplinary Approach</em>
+ * by Robert Sedgewick and Kevin Wayne.
+ * <p>
+ * @author Robert Sedgewick
+ * @author Kevin Wayne
  */
 public final class StdOut {
 
@@ -74,14 +75,14 @@ public final class StdOut {
     static {
         try {
             out = new PrintWriter(new OutputStreamWriter(System.out, CHARSET_NAME), true);
-        }
-        catch (UnsupportedEncodingException e) {
+        } catch (UnsupportedEncodingException e) {
             System.out.println(e);
         }
     }
 
     // don't instantiate
-    private StdOut() { }
+    private StdOut() {
+    }
 
     /**
      * Terminates the current line by printing the line-separator string.
@@ -274,7 +275,6 @@ public final class StdOut {
      * Prints a formatted string to standard output, using the specified format
      * string and arguments, and then flushes standard output.
      *
-     *
      * @param format the <a href = "http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax">format string</a>
      * @param args   the arguments accompanying the format string
      */
@@ -307,7 +307,7 @@ public final class StdOut {
         StdOut.println("Test");
         StdOut.println(17);
         StdOut.println(true);
-        StdOut.printf("%.6f\n", 1.0/7.0);
+        StdOut.printf("%.6f\n", 1.0 / 7.0);
     }
 
 }

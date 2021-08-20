@@ -3,6 +3,7 @@ public class User {
     private String password;
     private String email;
 
+    //    two constructors for new and old user
     public User(boolean isBuyer, String userName, String password, String email) {
         if (isBuyer) {
             Admin.userFileHandling(true, "src//buyers.txt", true, userName, password, email, this);
@@ -19,6 +20,7 @@ public class User {
         }
     }
 
+    //    below methods are setter or getter methods
     public String getEmail() {
         return email;
     }

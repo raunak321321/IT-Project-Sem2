@@ -1,7 +1,10 @@
 import java.io.*;
 import java.util.Scanner;
 
+//this class also used fileHandling system like FileWriter and BufferedWrite and use them to append or reWrite some data
 public class Admin implements FileHandling {
+    //   for new user--> this method check that details entered by the new user is valid or not(there are some checks which need to tick like details must not match with any of the old users details)
+//   for old user--> this method check that details entered by the old user is valid or not(there are some checks which need to tick like details must match with the details the user gave during signup)
     public static void userFileHandling(boolean newUser, String path, boolean isBuyer, String userName, String password, String email, User person) {
         if (newUser) {
             String filename = path;
@@ -95,6 +98,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    the below 5 method is just call the FileHandling method
     public static void appendOrWrite(String path, int id, String appendData, String notAppendData) {
         FileHandling.appendOrWrite(path, id, appendData, notAppendData);
     }
@@ -115,6 +119,7 @@ public class Admin implements FileHandling {
         FileHandling.appendSameLine(path2, appendData2, isSameLine);
     }
 
+    //    It updates the amount the amount earn in EarnTillDate.txt file
     public static void updateEarnAmount(float amountToBeAdd) throws IOException {
         double amount = 0;
         String path5 = "src//earnTillDate.txt";
@@ -135,6 +140,7 @@ public class Admin implements FileHandling {
         bw1.close();
     }
 
+    //    This method take customer as a argument and take all the items which is in users cart to the buyedProduct.txt file corresponding to that user
     public static void letBuyCartProd(Customer customer) {
         String path = "src//usersCart.txt";
         File myObj = new File(path);
@@ -169,6 +175,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method take info of customer cart from usersCart.txt file and print them in console.
     public static void letViewCart(Customer customer) {
         String filename1 = "src//usersCart.txt";
         File myObj = new File(filename1);
@@ -210,6 +217,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method take info of customer history from buyedProduct.txt file and print them in console.
     public static void letViewPurchaseHistory(Customer customer) {
         String filename1 = "src//buyedProducts.txt";
         File myObj = new File(filename1);
@@ -251,6 +259,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method take all the categories from CategoryAndSubCategories.txt file and then print them in the console.
     public static void letGetCategory() {
         String filename1 = "src//CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
@@ -268,6 +277,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method take all the subCategories corresponding to that particular categories from CategoryAndSubCategories.txt file and then print them in the console.
     public static void letGetSubCategory(String category) {
         String filename1 = "src//CategoryAndSubCategories.txt";
         File myObj = new File(filename1);
@@ -297,6 +307,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method take all the products corresponding to that particular suCategories from SubCategoryAndProducts.txt file and then print them in the console with their id.
     public static void letGetProducts(String subCategory) {
         String filename1 = "src//SubCategoryAndProducts.txt";
         File myObj = new File(filename1);
@@ -326,6 +337,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method just help product constructor to initialize its instance variables
     public static void allAboutProducts(int id, Product product) {
         String filename1 = "src//products.txt";
         File myObj = new File(filename1);
@@ -355,6 +367,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method is used for get rating to that particular product
     public static float letGetRating(Product product) {
         float rating = 0;
         int n = product.getId();
@@ -385,6 +398,7 @@ public class Admin implements FileHandling {
         return rating;
     }
 
+    //    this method print all the reviews by different user corresponding to that product id
     public static void letGetReviews(Product product) {
         String filename1 = "src//reviews.txt";
         File myObj = new File(filename1);
@@ -417,6 +431,7 @@ public class Admin implements FileHandling {
         }
     }
 
+    //    this method update the id by which is present in id.txt file
     public static int letUpdateId() throws IOException {
         int id = 0;
         String path4 = "src//ids.txt";
@@ -439,6 +454,7 @@ public class Admin implements FileHandling {
         return id;
     }
 
+    //    this method update product quantity when the particuar is buyed
     public void updateProductFileLine(int id, String str) {
         String path = "src//products.txt";
         File myObj = new File(path);

@@ -1,4 +1,6 @@
 public class Object {
+
+    //    these all methods just calling Admin class method for some file updating and all
     public static void getCategory() {
         Admin.letGetCategory();
     }
